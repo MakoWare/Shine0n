@@ -1,0 +1,28 @@
+<template id="ballTemplate">
+  <h1>ball</h1>
+</template>
+
+<script>
+ 'use strict';
+ var owner = (document._currentScript || document.currentScript).ownerDocument;
+ class BallController {
+   constructor(el) {
+     this.el = el;
+     this.setupComponent();
+   }
+   setupComponent() {
+     this.shadow = this.el.createShadowRoot();
+
+     // stamp out our template in the shadow dom
+     var template = owner.querySelector("#ballTemplate").content.cloneNode(true);
+     this.shadow.appendChild(template);
+   }
+ }
+ class Ball extends HTMLElement {
+   createdCallback() {
+     console.log("Ball.createdCallback()");
+     this.controller = new BallController(this);
+   }
+ }
+ document.registerElement('x-ball', Ball);
+</script>
