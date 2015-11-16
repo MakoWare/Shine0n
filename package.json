@@ -1,6 +1,8 @@
 {
   "jspm": {
     "dependencies": {
+      "gulp": "npm:gulp@^3.9.0",
+      "gulp-concat": "npm:gulp-concat@^2.6.0",
       "webcomponents.js": "npm:webcomponents.js@^0.7.2"
     },
     "devDependencies": {
@@ -8,5 +10,14 @@
       "babel-runtime": "npm:babel-runtime@^5.8.24",
       "core-js": "npm:core-js@^1.1.4"
     }
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "gulp-babel": "^6.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-foreach": "^0.1.0",
+    "gulp-regex-replace": "^0.2.3",
+    "gulp-vulcanize": "^6.1.0",
+    "map-stream": "0.0.6"
   }
 }
